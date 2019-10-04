@@ -4,7 +4,7 @@ class Image extends Component {
   render() {
     const { alt } = this.props;
 
-    return <img alt={alt} />;
+    return <img className="coverflow__cover__25-7e" alt={alt} />;
   }
 }
 
