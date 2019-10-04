@@ -15,6 +15,20 @@ class Image extends Component {
     this.observer.observe(this.target.current);
   };
 
+  handleIntersect = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const { src } = this.props;
+
+        const image = entry.target;
+
+        image.src = src;
+
+        observer.unobserve(image);
+      }
+    });
+  };
+
   render() {
     const { alt } = this.props;
 
