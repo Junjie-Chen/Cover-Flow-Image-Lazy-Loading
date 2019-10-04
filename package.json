@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "radium": "^0.26.0",
     "react": "^16.10.2",
+    "react-coverflow": "^0.2.20",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
