@@ -3,6 +3,7 @@ import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
 import { useQuery } from "@apollo/react-hooks";
 import query from '../query/images';
+import Image from './Image';
 
 const CoverFlow = () => {
   const { data: { images } } = useQuery(query);
@@ -21,7 +22,7 @@ const CoverFlow = () => {
           }
         }}>
         {
-          images.map(image => <img key={image.id} src={image.src} alt={image.alt} />)
+          images.map(image => <Image key={image.id} src={image.src} alt={image.alt} />)
         }
       </Coverflow>
     </StyleRoot>
