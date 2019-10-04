@@ -22,7 +22,7 @@ const CoverFlow = () => {
           }
         }}>
         {
-          images.map(image => <Image key={image.id} src={image.src} alt={image.alt} />)
+          images.map(image => <Image key={image.id} {...image} />)
         }
       </Coverflow>
     </StyleRoot>
